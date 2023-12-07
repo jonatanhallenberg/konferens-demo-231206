@@ -1,6 +1,6 @@
 import { postRouter } from "~/server/api/routers/post";
 import { createTRPCRouter } from "~/server/api/trpc";
-import { aiRouter } from "./routers/ai";
+import { rhymeRouter } from "./routers/rhyme";
 
 /**
  * This is the primary router for your server.
@@ -9,7 +9,8 @@ import { aiRouter } from "./routers/ai";
  */
 export const appRouter = createTRPCRouter({
   post: postRouter,
-  ai: aiRouter
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  rhyme: rhymeRouter,
 });
 
 // export type definition of API
